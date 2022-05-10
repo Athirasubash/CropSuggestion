@@ -1,0 +1,39 @@
+{% include 'admin_header.html' %}
+  
+
+<div class="container-fluid col-md-12"  style="background-image: url(/static/images/farmer.jpg);height: 250px;background-position: center;background-repeat: no-repeat;background-size: cover;">
+
+                           
+	  </div>
+      
+
+
+<center>
+<form method="post">
+
+<h1 align="center" style="font-size: 25px;font-family: bold">View Enquiries</h1>
+<table class="table"style="font-size: 20px;color: #000;width: 800px">
+	<tr>
+		<th>Farmer Name</th>
+		<th>Enquiry</th>
+		<th>Reply</th>
+		
+		
+	
+	</tr>
+	{% for row in data['enquiry'] %}
+	<tr>
+		<td>{{row['first_name'] +" "+ row['last_name'] }} </td>
+		<td>{{row['enquiry']}}</td>
+		<td>{{row['reply']}}</td>
+		
+	</tr>
+	{% endfor %}
+</table>
+
+</form>
+</center>
+
+{% include 'footer.html' %}
+
+
